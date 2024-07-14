@@ -35,7 +35,7 @@ const products = [[
 [
     { name: 'Jump Rope with Digital Counter', price: '14.99', img: 'https://kinzo.org/wp-content/uploads/2020/09/Hb0a8dd4ec11e48168a99de582f1a3a09Q-removebg-preview.png', stock: "27", id: "5", quantity: "1", description: "Jump rope with a built-in digital counter to track your jumps and improve your cardio workouts." },
     { name: 'Foldable Treadmill', price: '299.99', img: 'https://au.walkingpad.com/cdn/shop/files/KWTM-G1_media-01.png?v=1718947243', stock: "6", id: "6", quantity: "1", description: "Compact and foldable treadmill perfect for home workouts, featuring multiple speed settings and an easy-to-store design." },
-    { name: 'Portable Elliptical Trainer', price: '199.99', img: 'https://ae01.alicdn.com/kf/S84211c53b4774aa39c3e96ac8e31eca6c/Portable-Exercise-stepper-Elliptical-Trainer-Mini-Home-Gym-stepper-Motorized-stepper-Electric-Elliptical-Machine.jpg', stock: "5", id: "7", quantity: "1", description: "Mini portable elliptical trainer ideal for home use, offering a low-impact cardiovascular workout." },
+    { name: 'Portable Elliptical Trainer', price: '199.99', img: 'https://www.cubii.com/media/catalog/product/cache/dccac05cb786ee50b145cbded12c4990/g/o/goaquaside_1.png', stock: "5", id: "7", quantity: "1", description: "Mini portable elliptical trainer ideal for home use, offering a low-impact cardiovascular workout." },
     { name: 'High-Speed Jump Rope', price: '9.99', img: 'https://bearkomplex.com/cdn/shop/files/Untitleddesign_12_7f54ec37-0e27-4453-b2b6-cfaf3c2f0fe4_1024x1024.png?v=1706119671', stock: "28", id: "8", quantity: "1", description: "High-speed jump rope designed for quick and efficient cardio workouts, enhancing speed and endurance." }
 ], 
 [
@@ -54,7 +54,7 @@ const products = [[
     { name: 'Smart Fitness Tracker', price: '49.99', img: 'https://itouchwearables.com/cdn/shop/files/FitnessTrackerJM.6.png?v=1685104249&width=3840', stock: "15", id: "17", quantity: "1", description: "Smart fitness tracker to monitor your activity, heart rate, and sleep, helping you stay on top of your fitness goals." },
     { name: 'Hydration Backpack for Running', price: '29.99', img: 'https://shop.sportsbasement.com/cdn/shop/products/100243257-CHARCOAL-1_grande.png?v=1709249656', stock: "20", id: "18", quantity: "1", description: "Lightweight hydration backpack designed for runners, featuring a water reservoir and multiple storage compartments." },
     { name: 'Bluetooth Earbuds for Workouts', price: '39.99', img: 'https://i0.wp.com/garegear.com/wp-content/uploads/2024/03/2-5-e1710424720361.png?fit=640%2C640&ssl=1', stock: "10", id: "19", quantity: "1", description: "Wireless Bluetooth earbuds designed for workouts, offering high-quality sound and a secure fit for active lifestyles." },
-    { name: 'Sweat-Wicking Headbands (Pack of 3)', price: '12.99', img: '/assets/images/headBands.png', stock: "30", id: "20", quantity: "1", description: "Pack of 3 sweat-wicking headbands to keep you dry and comfortable during workouts, made from breathable and stretchy material." }
+    { name: 'Sweat-Wicking Headbands (Pack of 3)', price: '12.99', img: './../.././assets/images/headBnads.png', stock: "30", id: "20", quantity: "1", description: "Pack of 3 sweat-wicking headbands to keep you dry and comfortable during workouts, made from breathable and stretchy material." }
 ]];
 
     
