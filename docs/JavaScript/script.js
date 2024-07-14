@@ -22,7 +22,8 @@ const localCart = JSON.parse(localStorage.getItem("products")) || [];
         
         function updateProductDisplay() {
             const product = productsArray[counter];
-            if(counter == 20){
+            console.log(counter)
+            if(counter === 19){
                 productImg.src = "./assets/images/headBands.png"
             }else{
                 productImg.src = product.img;
