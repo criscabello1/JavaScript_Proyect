@@ -22,7 +22,11 @@ const localCart = JSON.parse(localStorage.getItem("products")) || [];
         
         function updateProductDisplay() {
             const product = productsArray[counter];
-            productImg.src = product.img;
+            if(counter == 20){
+                productImg.src = "./assets/images/headBands.png"
+            }else{
+                productImg.src = product.img;
+            }
             productPrice.innerText = `$${product.price}`;
             productName.innerText = product.name;
         }

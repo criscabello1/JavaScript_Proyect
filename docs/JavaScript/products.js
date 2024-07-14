@@ -7,7 +7,7 @@ const cart = document.getElementById("cart");
 const productView = document.getElementById("productView");
 let localCart = JSON.parse(localStorage.getItem("cart")) || [];
 let localUser = JSON.parse(localStorage.getItem("currentUser"))
-let localProducts = JSON.parse(localStorage.getItem("currentUser"))
+let localProducts = JSON.parse(localStorage.getItem("products"))
 let btnEditProducts = document.getElementById("btnEditProducts");
 if (document.cookie) {
     logIn.innerText = "Home";
@@ -147,9 +147,6 @@ function closeProduct(){
 
 const sectionTitles = ["Workout Essentials", "Cardio Gear", "Strength Training", "Recovery Tools", "Fitness Accessories"];
 
-products.forEach((productSection, index) => {
-    visualizeProducts(productSection, sectionTitles[index]);
-});
 window.onload = (()=>{
     if(localUser.role === "admin"){
         btnEditProducts.classList.remove("hidden")
@@ -171,8 +168,11 @@ window.onload = (()=>{
         localStorage.setItem("cart", JSON.stringify(localCart));
         cart.setAttribute("data-quantity", 0);
     }else{
-    cart.setAttribute("data-quantity", JSON.parse(localStorage.getItem("cart")).length);
+        cart.setAttribute("data-quantity", JSON.parse(localStorage.getItem("cart")).length);
     }
+    localProducts.forEach((productSection, index) => {
+        visualizeProducts(productSection, sectionTitles[index]);
+    });
 });
 
 

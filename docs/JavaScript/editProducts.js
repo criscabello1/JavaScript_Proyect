@@ -123,7 +123,7 @@ btnSaveProduct.addEventListener('click', () => {
             price: productPrice.value,
             stock: productStock.value,
             // SE PUEDE GUARDAR LA IMAGEN EN BACK-END CON LA LIBRERIA MULTER.JS
-            // image: productImageFile ? URL.createObjectURL(productImageFile) : null  
+            // image: productImageFile ? URL.createObjectURL(productImageFile) : null
         };
 
         if (productId >= 0 && productId < products[groupId].length) {
