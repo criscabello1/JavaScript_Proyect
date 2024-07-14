@@ -1,4 +1,4 @@
-let localCart = JSON.parse(localStorage.getItem("cart"));
+let localCart = JSON.parse(localStorage.getItem("cart")) || [];
 const main = document.getElementById("main");
 const header = document.getElementById("header");
 const error = document.getElementById("error");

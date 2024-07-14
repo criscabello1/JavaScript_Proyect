@@ -1,6 +1,6 @@
-let localUsers = JSON.parse(localStorage.getItem("users"))
+let localUsers = JSON.parse(localStorage.getItem("users")) || []
 let localUser = JSON.parse(localStorage.getItem("currentUser")) || {}
-const localCart = JSON.parse(localStorage.getItem("cart"))
+const localCart = JSON.parse(localStorage.getItem("cart")) || []
 const cart = document.getElementById("cart")
 const usersGrid = document.getElementById("usersGrid")
 const usersForm = document.getElementById("usersForm")

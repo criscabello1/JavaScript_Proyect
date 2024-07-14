@@ -6,8 +6,8 @@ const productsGrid = document.getElementById("productsGrid");
 const cart = document.getElementById("cart");
 const productView = document.getElementById("productView");
 let localCart = JSON.parse(localStorage.getItem("cart")) || [];
-let localUser = JSON.parse(localStorage.getItem("currentUser"))
-let localProducts = JSON.parse(localStorage.getItem("products"))
+let localUser = JSON.parse(localStorage.getItem("currentUser"))  || {}
+let localProducts = JSON.parse(localStorage.getItem("products")) || []
 let btnEditProducts = document.getElementById("btnEditProducts");
 if (document.cookie) {
     logIn.innerText = "Home";
