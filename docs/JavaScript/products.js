@@ -54,7 +54,7 @@ const products = [[
     { name: 'Smart Fitness Tracker', price: '49.99', img: 'https://itouchwearables.com/cdn/shop/files/FitnessTrackerJM.6.png?v=1685104249&width=3840', stock: "15", id: "17", quantity: "1", description: "Smart fitness tracker to monitor your activity, heart rate, and sleep, helping you stay on top of your fitness goals." },
     { name: 'Hydration Backpack for Running', price: '29.99', img: 'https://shop.sportsbasement.com/cdn/shop/products/100243257-CHARCOAL-1_grande.png?v=1709249656', stock: "20", id: "18", quantity: "1", description: "Lightweight hydration backpack designed for runners, featuring a water reservoir and multiple storage compartments." },
     { name: 'Bluetooth Earbuds for Workouts', price: '39.99', img: 'https://i0.wp.com/garegear.com/wp-content/uploads/2024/03/2-5-e1710424720361.png?fit=640%2C640&ssl=1', stock: "10", id: "19", quantity: "1", description: "Wireless Bluetooth earbuds designed for workouts, offering high-quality sound and a secure fit for active lifestyles." },
-    { name: 'Sweat-Wicking Headbands (Pack of 3)', price: '12.99', img: './../.././assets/images/headBnads.png', stock: "30", id: "20", quantity: "1", description: "Pack of 3 sweat-wicking headbands to keep you dry and comfortable during workouts, made from breathable and stretchy material." }
+    { name: 'Sweat-Wicking Headbands (Pack of 3)', price: '12.99', img: './../../../assets/images/headBands.png', stock: "30", id: "20", quantity: "1", description: "Pack of 3 sweat-wicking headbands to keep you dry and comfortable during workouts, made from breathable and stretchy material." }
 ]];
 
     
