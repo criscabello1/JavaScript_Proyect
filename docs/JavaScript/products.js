@@ -6,7 +6,7 @@ const productsGrid = document.getElementById("productsGrid");
 const cart = document.getElementById("cart");
 const productView = document.getElementById("productView");
 let localCart = JSON.parse(localStorage.getItem("cart")) || [];
-let localUser = JSON.parse(localStorage.getItem("currentUser"))  || {}
+let localUser = JSON.parse(localStorage.getItem("currentUser"))
 let localProducts = JSON.parse(localStorage.getItem("products")) || []
 let btnEditProducts = document.getElementById("btnEditProducts");
 if (document.cookie) {
@@ -23,7 +23,6 @@ if (document.cookie) {
         window.location.reload();
     });
 }
-
 
 
 const products = [[ 
@@ -148,12 +147,14 @@ function closeProduct(){
 const sectionTitles = ["Workout Essentials", "Cardio Gear", "Strength Training", "Recovery Tools", "Fitness Accessories"];
 
 window.onload = (()=>{
-    if(localUser.role === "admin"){
-        btnEditProducts.classList.remove("hidden")
-        signUp.classList.remove("w-[40%]")
-        signUp.classList.add("w-[25%]")
-        logIn.classList.remove("w-[40%]")
-        logIn.classList.add("w-[25%]")
+    if (localUser){
+        if(localUser.role === "admin"){
+            btnEditProducts.classList.remove("hidden")
+            signUp.classList.remove("w-[40%]")
+            signUp.classList.add("w-[25%]")
+            logIn.classList.remove("w-[40%]")
+            logIn.classList.add("w-[25%]")
+        }
     }
     if(!localStorage.getItem("products")){
         localStorage.setItem("products", JSON.stringify(products));
