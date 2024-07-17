@@ -141,6 +141,7 @@ btnCreateUser.addEventListener('click', () => showUsersForm());
 
 window.onload = () => {
     if(localUser.role !== "admin"){
+        document.body.innerHTML = ""
         window.location.assign("./../../../index.html")
     }
     loadUsers()
