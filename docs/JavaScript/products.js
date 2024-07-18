@@ -164,6 +164,7 @@ window.onload = (()=>{
         localStorage.setItem("cart", JSON.stringify(cart));   
     }
     if(!document.cookie){
+        localStorage.removeItem("currentUser")
         let localCart = JSON.parse(localStorage.getItem("cart"));
         localCart = [];
         localStorage.setItem("cart", JSON.stringify(localCart));

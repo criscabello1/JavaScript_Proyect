@@ -62,6 +62,7 @@ const localCart = JSON.parse(localStorage.getItem("products")) || [];
                 localStorage.setItem("users", JSON.stringify(users));
             }
             if (!document.cookie) {
+                localStorage.removeItem("currentUser")
                 localStorage.setItem("cart", JSON.stringify([]));
                 cart.setAttribute("data-quantity", 0);
             } else {
