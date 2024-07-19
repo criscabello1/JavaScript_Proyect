@@ -101,10 +101,13 @@
                     <label for="productId" id="productIdLabel" class="hidden text-sm font-medium text-gray-700">Product Id</label>
                     <input type="hidden" id="productId" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
                 </div>
-                <!-- <div class="mb-4">
+                <div class="mb-4">
                   <label for="producproductImagetId"  class="block text-sm font-medium text-gray-700">Product Image</label>
                   <input type="file" id="productImage" name="productImage" accept="image/*">
-              </div> -->
+                  <div class="w-full bg-[#ddd] p-4 rounded my-4 flex justify-center">
+                    <img class="max-w-[200px]" id="productImagePreview" src="" alt="Product image preview">
+                  </div>
+              </div>
                 <div class="flex justify-end">
                     <button type="button" id="btnSaveProduct" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700">Save</button>
                     <button type="button" id="btnCancelProduct" class="bg-red-500 text-white px-4 py-2 ml-4 rounded-md hover:bg-red-700">Cancel</button>

@@ -12,7 +12,8 @@ let productName = document.getElementById("productName")
 let productDescription = document.getElementById("productDescription")
 let productPrice = document.getElementById("productPrice")
 let productStock = document.getElementById("productStock")
-// let productImage = document.getElementById("productImage")
+let productImage = document.getElementById("productImage")
+let productImagePreview = document.getElementById("productImagePreview");
 const groupId = document.getElementById("groupId")
 
 const errorMessages = {
@@ -74,6 +75,14 @@ function loadProducts() {
 }
 
 
+productImage.addEventListener("change", ()=>{
+    const productImageFile = document.getElementById("productImage").files[0];
+    const reader = new FileReader();
+    reader.onload = (event) => {
+        productImagePreview.src = event.target.result;
+    };
+    reader.readAsDataURL(productImageFile);
+});
 
 function showProductForm(groupIndex, productIndex) {
     formProduct.reset();
@@ -86,6 +95,11 @@ function showProductForm(groupIndex, productIndex) {
     productDescription.value = product.description || "";
     productPrice.value = product.price || "";
     productStock.value = product.stock || "";
+    if (product.img) {
+        productImagePreview.src = product.img;
+    } else {
+        productImagePreview.src = "";
+    }
 }
 
 btnSaveProduct.addEventListener('click', () => {
@@ -95,8 +109,8 @@ btnSaveProduct.addEventListener('click', () => {
     const isDescriptionInputValid = validateField(productDescription, regex.description, errorMessages.description);
     const isPriceInputValid = validateField(productPrice, regex.price, errorMessages.price);
     const isStockInputValid = validateField(productStock, regex.stock, errorMessages.stock);
-    // const productImageFile = document.getElementById("productImage").files[0];
-    // console.log(URL.createObjectURL(productImageFile));
+    const productImageFile = document.getElementById("productImage").files[0];
+    
     if (isNameInputValid && isDescriptionInputValid && isPriceInputValid && isStockInputValid) {
         if (!products[groupId]) {
             products[groupId] = [];
@@ -106,23 +120,43 @@ btnSaveProduct.addEventListener('click', () => {
             description: productDescription.value,
             price: productPrice.value,
             stock: productStock.value,
-            // SE PUEDE GUARDAR LA IMAGEN EN BACK-END CON LA LIBRERIA MULTER.JS
-            // image: productImageFile ? URL.createObjectURL(productImageFile) : null
+            img: products[groupId][productId] ? products[groupId][productId].img : "" // Mantener la imagen actual si no se carga una nueva
         };
 
-        if (productId >= 0 && productId < products[groupId].length) {
-            products[groupId][productId] = newProduct;
-        } else {
-            products[groupId].push(newProduct);
-        }
+        if (productImageFile) {
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                newProduct.img = event.target.result;
 
-        localStorage.setItem("products", JSON.stringify(products));
-        loadProducts();
-        productForm.close();
-        productForm.classList.add('hidden');
-        window.location.reload();
+                if (productId >= 0 && productId < products[groupId].length) {
+                    products[groupId][productId] = newProduct;
+                } else {
+                    products[groupId].push(newProduct);
+                }
+
+                localStorage.setItem("products", JSON.stringify(products));
+                loadProducts();
+                productForm.close();
+                productForm.classList.add('hidden');
+                window.location.reload();
+            };
+            reader.readAsDataURL(productImageFile);
+        } else {
+            if (productId >= 0 && productId < products[groupId].length) {
+                products[groupId][productId] = newProduct;
+            } else {
+                products[groupId].push(newProduct);
+            }
+
+            localStorage.setItem("products", JSON.stringify(products));
+            loadProducts();
+            productForm.close();
+            productForm.classList.add('hidden');
+            window.location.reload();
+        }
     }
 });
+
 
 
 btnCancelProduct.addEventListener('click', () => {
